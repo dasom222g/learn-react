@@ -36,8 +36,9 @@ const Counter = () => {
     // const type = banana.type
 
     const { color: colorName } = banana;
+    test();
 
-    console.log('color', colorName);
+    // console.log('color', colorName);
     // console.log('price', price);
     // console.log('type', type);
   };
@@ -55,25 +56,25 @@ const Counter = () => {
 
     const { name, age, gender } = person;
 
-    if (name === 'somi' || age === 34) {
-      console.log('true!!');
-    }
+    // if (name === 'somi' || age === 34) {
+    //   console.log('true!!');
+    // }
 
-    if (!(name === 'somi')) {
-      console.log('not');
-    }
+    // if (!(name === 'somi')) {
+    //   console.log('not');
+    // }
 
-    console.log('gender', gender);
-    console.log(!!gender);
-    console.log('!!gender', !!gender);
+    // console.log('gender', gender);
+    // console.log(!!gender);
+    // console.log('!!gender', !!gender);
 
     // default parameter
 
     const add = (num1, num2) => {
       if (!!num2) {
       }
-      console.log('num1', num1, 'num2', num2);
-      console.log('add', num1 + num2);
+      // console.log('num1', num1, 'num2', num2);
+      // console.log('add', num1 + num2);
     };
 
     add(1, 2);
@@ -108,8 +109,8 @@ const Counter = () => {
       message: '세상을 바꾸는건 꿈을 꾸고 도전하는 사람들의 몫이다',
     };
 
-    console.log('chutzrit', chutzrit);
-    console.log('chutzritCopy', chutzritCopy);
+    // console.log('chutzrit', chutzrit);
+    // console.log('chutzritCopy', chutzritCopy);
 
     const isCoffee = false;
 
@@ -124,8 +125,19 @@ const Counter = () => {
       room = coke;
     }
 
-    console.log('room', room);
+    // console.log('room', room);
   });
+
+  const sleep = (ms) => {
+    // ms시간 후 resolve함수가 실행되어 끝남
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  };
+
+  const test = async () => {
+    console.log('시작');
+    await sleep(3000);
+    console.log('끝');
+  };
 
   // view
   return (
