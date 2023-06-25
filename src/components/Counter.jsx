@@ -5,7 +5,7 @@ const Counter = () => {
 
   let count = 0;
 
-  const initialCount = 6;
+  const initialCount = 0;
 
   const [count1, setCount1] = useState(initialCount);
 
@@ -22,10 +22,11 @@ const Counter = () => {
   const max = 10;
 
   const increase = () => {
-    if (count1 >= max) return;
+    // if (count1 >= max) return;
     // count1 += 1;
-    // console.log('increase', count);
     setCount1((prev) => prev + 1);
+    count += 1;
+    console.log('increase', count);
     // console.log('count1', count1);
 
     // const {value} = input
@@ -36,7 +37,6 @@ const Counter = () => {
     // const type = banana.type
 
     const { color: colorName } = banana;
-    test();
 
     // console.log('color', colorName);
     // console.log('price', price);
@@ -131,12 +131,6 @@ const Counter = () => {
   const sleep = (ms) => {
     // ms시간 후 resolve함수가 실행되어 끝남
     return new Promise((resolve) => setTimeout(resolve, ms));
-  };
-
-  const test = async () => {
-    console.log('시작');
-    await sleep(3000);
-    console.log('끝');
   };
 
   // view

@@ -13,6 +13,11 @@ const MyBox = ({ person, edit }) => {
     edit(editedPerson);
   };
 
+  const handleParm = (data) => {
+    console.log('data!!!');
+    console.log('data', data);
+  };
+
   // view
   return (
     <>
@@ -28,6 +33,9 @@ const MyBox = ({ person, edit }) => {
         <span style={{ display: 'block' }}>{`gender: ${gender}!`}</span>
         <button type="button" onClick={handleClick}>
           선혁, male로 수정
+        </button>
+        <button type="button" onClick={() => handleParm(1)}>
+          파라메터
         </button>
       </div>
       {/* <div className={isComplete ? 'complete' : ''}>박스2</div> */}
